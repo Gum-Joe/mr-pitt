@@ -22,8 +22,8 @@ pri = function(nu) {
 
 pri()
 
-console.log("There are "+prim.length+" prime numbers before "+n)
-console.log("They are:");
+writeln("There are "+prim.length+" prime numbers before "+n)
+writeln("They are:");
 for (var b = 0; b < prim.length; b++) {
-  console.log(prim[b]);
+  writeln(prim[b]);
 }
