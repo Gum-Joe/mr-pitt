@@ -2,7 +2,7 @@
 // Find the lucky number before and after an interger
 // Vars
 // interger
-var intg = 10000;
+var intg = 500;
 // var max = 10000;
 var max = 10050;
 // Odd numbers & lucky numbers with undefined
@@ -45,18 +45,13 @@ for (var c = 0; c < odd.length; c++) {
 
 // Find lowest luck number
 for (var d = 0; d < intg; d++) {
-  if (d === 0 && hbcn === 0) {
-    // Do nothing
-  } else {
     if (luck[d] - intg < hbcn && luck[d] - intg <! 0) {
       bcn = luck[d];
       hbcn = intg - luck[d];
     }
-  }
 }
 
 // highest
-// XXX: Does not work. Return's 0.
 for (var e = 0; e < luck.length; e++) {
   if (hacn === 0) {
     if (luck[e] - intg > 0) {
