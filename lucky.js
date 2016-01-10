@@ -2,8 +2,9 @@
 // Find the lucky number before and after an interger
 // Vars
 // interger
-var intg = 940;
-var max = 10000;
+var intg = 10000;
+// var max = 10000;
+var max = 10050;
 // Odd numbers & lucky numbers with undefined
 var odd = [];
 // Lucky numbers final
