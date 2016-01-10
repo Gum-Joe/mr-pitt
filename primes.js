@@ -9,7 +9,8 @@ var fprims = [];
 var npr = []
 
 // Nodejs
-writeln = console.log;
+// writeln = console.log;
+//fs.openSync("log.log", "w");
 // Get all numbers before
 for (var i = 0; i < nump; i++) {
   // Check whether i is divisible by each number below it
@@ -46,7 +47,7 @@ for (var c = 0; c < prims.length; c++) {
   }
 }
 
-writeln("There are "+fprims.length+" before the number "+num)
+writeln("There are "+fprims.length+" prime numbers before the number "+num)
 writeln("They are:");
 /*for (var x = 0; x < fprims.length; x++) {
   if (fprims[x] !== null) {
