@@ -2,9 +2,9 @@
 // Find the lucky number before and after an interger
 // Vars
 // interger
-var intg = 500;
-// var max = 10000;
-var max = 10050;
+var intg = 50;
+// Max
+var max = 10500;
 // Odd numbers & lucky numbers with undefined
 var odd = [];
 // Lucky numbers final
@@ -17,7 +17,7 @@ var acn = 0;
 var hacn = 0;
 
 // Nodejs
-var writeln = console.log;
+//var writeln = console.log;
 // get odds
 for (var i = 0; i < max; i++) {
   if (i % 2 != 0) {
@@ -26,6 +26,20 @@ for (var i = 0; i < max; i++) {
 }
 
 // Get lucky numbers
+for (var i = 0; i < odd.length; i++) {
+  if (i !== 0) {
+    // Cross off numbers
+    var numbz = odd[i] - 1;
+    var numbzx = odd[i];
+    for (var z = i; z < odd.length; z++) {
+      var x = z + 1;
+      if (x % odd[i] === 0) {
+        odd[z] = undefined;
+      }
+    }
+  }
+}
+/*
 for (var a = 0; a < odd.length; a++) {
   if (a !== 0 && a !== 1) {
     for (var b = a; b < odd.length; b++) {
@@ -34,7 +48,7 @@ for (var a = 0; a < odd.length; a++) {
       }
     }
   }
-}
+}*/
 
 // Get final lucky numbers
 for (var c = 0; c < odd.length; c++) {
