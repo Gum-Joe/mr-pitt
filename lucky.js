@@ -2,6 +2,7 @@
 // Find the lucky number before and after an interger
 // Vars
 // interger
+// FIXME
 var intg = 50;
 // Max
 var max = 10500;
