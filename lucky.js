@@ -18,7 +18,7 @@ var acn = 0;
 var hacn = 0;
 
 // Nodejs
-//var writeln = console.log;
+var writeln = console.log;
 // get odds
 for (var i = 0; i < max; i++) {
   if (i % 2 != 0) {
