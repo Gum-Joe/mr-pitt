@@ -57,6 +57,7 @@ for (var c = 0; c < odd.length; c++) {
     luck.push(odd[c]);
   }
 }
+writeln(luck)
 
 // Find lowest luck number
 for (var d = 0; d < intg; d++) {
