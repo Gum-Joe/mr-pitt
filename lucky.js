@@ -2,13 +2,15 @@
 // Find the lucky number before and after an interger
 // Vars
 // interger
-var intg = 50;
+var intg = 399;
 // Max
 var max = 10500;
 // Odd numbers & lucky numbers with undefined
 var odd = [];
 // Lucky numbers final
-var luck = [];
+//var luck = [];
+var lucky = [];
+var nluck = [];
 // Number which is below and close and how many away it is
 var bcn = 0;
 var hbcn = 0;
@@ -17,7 +19,7 @@ var acn = 0;
 var hacn = 0;
 
 // Nodejs
-//var writeln = console.log;
+var writeln = console.log;
 // get odds
 for (var i = 0; i < max; i++) {
   if (i % 2 != 0) {
@@ -26,18 +28,27 @@ for (var i = 0; i < max; i++) {
 }
 
 // Get lucky numbers
-for (var i = 0; i < odd.length; i++) {
-  if (i !== 0) {
-    // Cross off numbers
-    var numbz = odd[i] - 1;
-    var numbzx = odd[i];
-    for (var z = i; z < odd.length; z++) {
-      var x = z + 1;
-      if (x % odd[i] === 0) {
-        odd[z] = undefined;
+// XXX!
+var unc = 0;
+var count = odd.length;
+var oc = odd.length;
+for (var i = 1; i < odd.length; i++) {
+  //if (true) {
+    for (var a = 0; a < odd.length; a++) {
+        var u = oc - count;
+        var x = a+1-u;
+        var y = odd[i];
+        if (x % y === 0) {
+          delete odd[a];
+          unc = unc + 1;
+        }
+
+      var v = a+1;
+      if (v = odd.length) {
+        count += count - unc;
       }
     }
-  }
+  //}
 }
 /*
 for (var a = 0; a < odd.length; a++) {
@@ -53,29 +64,33 @@ for (var a = 0; a < odd.length; a++) {
 // Get final lucky numbers
 for (var c = 0; c < odd.length; c++) {
   if (odd[c] !== undefined) {
-    luck.push(odd[c]);
+    lucky.push(odd[c]);
   }
 }
-
+for (var i = 0; i < 20; i++) {
+  console.log(odd[i]);
+}
 // Find lowest luck number
 for (var d = 0; d < intg; d++) {
-    if (luck[d] - intg < hbcn && luck[d] - intg <! 0) {
-      bcn = luck[d];
-      hbcn = intg - luck[d];
+    if (lucky[d] - intg < hbcn && lucky[d] - intg <! 0) {
+      if (lucky[d] !== intg) {
+        bcn = lucky[d];
+        hbcn = intg - lucky[d];
+      }
     }
 }
 
 // highest
-for (var e = 0; e < luck.length; e++) {
+for (var e = 0; e < lucky.length; e++) {
   if (hacn === 0) {
-    if (luck[e] - intg > 0) {
-      acn = luck[e];
-      hacn = luck[e] - intg;
+    if (lucky[e] - intg > 0) {
+      acn = lucky[e];
+      hacn = lucky[e] - intg;
     }
   } else {
-    if (luck[e] - intg < hacn && luck[e] - intg > 0) {
-      acn = luck[e];
-      hacn = luck[e] - intg;
+    if (lucky[e] - intg < hacn && lucky[e] - intg > 0) {
+      acn = lucky[e];
+      hacn = lucky[e] - intg;
     }
   }
 }
