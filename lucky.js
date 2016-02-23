@@ -70,6 +70,7 @@ for (var c = 0; c < odd.length; c++) {
 for (var i = 0; i < 20; i++) {
   console.log(odd[i]);
 }
+
 // Find lowest luck number
 for (var d = 0; d < intg; d++) {
     if (lucky[d] - intg < hbcn && lucky[d] - intg <! 0) {
