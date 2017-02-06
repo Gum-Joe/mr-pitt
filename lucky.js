@@ -7,6 +7,7 @@ var intg = 399;
 var max = 10500;
 // Odd numbers & lucky numbers with undefined
 var odd = [];
+var other = [];
 // Lucky numbers final
 //var luck = [];
 var lucky = [];
@@ -35,19 +36,14 @@ var oc = odd.length;
 for (var i = 1; i < odd.length; i++) {
   //if (true) {
     for (var a = 0; a < odd.length; a++) {
-        var u = oc - count;
-        var x = a+1-u;
-        var y = odd[i];
-        if (x % y === 0) {
-          delete odd[a];
-          unc = unc + 1;
+      var x = a + 1
+      var oddi = odd[i]
+        if (x % oddi !== 0) {
+          other.push(odd[a]);
         }
-
-      var v = a+1;
-      if (v = odd.length) {
-        count += count - unc;
-      }
     }
+    // set
+    odd = other;
   //}
 }
 /*
